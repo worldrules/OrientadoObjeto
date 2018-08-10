@@ -9,31 +9,28 @@ namespace App\Controllers;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
+use App\Models\Compra;
 
 
 
 
-class ComprasController {
+class ComprasController extends Controller{
+
+
 
 
     //Cria a pagina e exibi na view
     public function index(ServerRequestInterface $request, ResponseInterface $response) {
 
-        $compras = [
-
-            ["titulo"=>"Carvão","desc"=>"5kg"],
-            ["titulo"=>"Arroz","desc"=>"1kg"],
-            ["titulo"=>"Cerveja","desc"=>"Latão"]
-
-        ];
+        $compras = Compra::all();
 
 
+        $this->compras = $compras;
 
-        $pagina = include '../app/views/home.php';
-
-        $response->getBody()->getContents($pagina);
-        return $response;
+        return $this->view('compras/index', $response);
     }
+
+
 
 
 }
