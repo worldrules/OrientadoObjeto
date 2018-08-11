@@ -1,9 +1,10 @@
-<?php $this->tituloPagina = 'Home';   ?>
+<?php $this->tituloPagina = 'Lista de Compras';   ?>
 
-<?php include dirname(__FILE__,2).'/layout/topo.php' //Only in php 7, volta 2 pastas ?>
+<?php $this->layout('layout.topo'); ?>
 
-<h2>Essa é a página principal</h2>
-<p>Lista de Compras</p>
+<h2>Lista de Compras</h2>
+
+<a href="/compras/adicionar">Criar</a>
 
 <ul>
     <?php foreach ($this->compras as $item => $value): ?>
@@ -11,6 +12,6 @@
     <?php endforeach ?>
 </ul>
 
-<?php include dirname(__FILE__,2).'/layout/rodape.php' //Only in php 7, volta 2 pastas ?>
+<?php $this->layout('layout.rodape');?>
 
 
