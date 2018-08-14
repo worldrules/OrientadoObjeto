@@ -9,12 +9,12 @@ namespace App\Controllers;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use App\Models\Compra;
+use App\Models\Usuario;
 
 
 
 
-class ComprasController extends Controller{
+class UsuariosController extends Controller{
 
 
 
@@ -22,42 +22,43 @@ class ComprasController extends Controller{
     //Cria a pagina e exibi na view
     public function index(ServerRequestInterface $request, ResponseInterface $response) {
 
-        $modelo = Compra::all();
+        $modelo = Usuario::all();
 
 
         $this->modelo = $modelo;
 
-        return $this->view('compras/index', $response);
+        return $this->view('usuarios/index', $response);
     }
 
 
     public function detalhe(ServerRequestInterface $request, ResponseInterface $response) {
 
         $id = $request->getAttribute('id');
-        $modelo = Compra::find($id);
+        $modelo = Usuario::find($id);
         $this->modelo = $modelo;
 
-        return $this->view('compras/show', $response);
+        return $this->view('usuarios/show', $response);
     }
 
 
     public function adicionar(ServerRequestInterface $request, ResponseInterface $response) {
 
 
-    return $this->view('compras/create', $response);
+    return $this->view('usuarios/create', $response);
 }
 
     public function salvar(ServerRequestInterface $request, ResponseInterface $response)
     {
         $dados = $request->getParsedBody();
-        $modelo = new Compra;
-        $modelo->titulo = $dados['titulo'];
-        $modelo->desc = $dados['desc'];
+        $modelo = new Usuario;
+        $modelo->nome = $dados['nome'];
+        $modelo->senha = md5($dados['senha']);
+        $modelo->email = $dados['email'];
         $objModelo = $modelo->save();
 
 
 
-        return $response->withRedirect('/compras');
+        return $response->withRedirect('/usuarios');
 
 
     }
@@ -67,11 +68,11 @@ class ComprasController extends Controller{
     public function editar(ServerRequestInterface $request, ResponseInterface $response) {
 
         $id = $request->getAttribute('id');
-        $modelo = Compra::find($id);
+        $modelo = Usuario::find($id);
         $this->modelo = $modelo;
 
 
-        return $this->view('compras/edit', $response);
+        return $this->view('usuarios/edit', $response);
     }
 
     public function atualizar(ServerRequestInterface $request, ResponseInterface $response)
@@ -80,21 +81,25 @@ class ComprasController extends Controller{
 
         $dados = $request->getParsedBody();
         $id = $request->getAttribute('id');
-        $modelo = Compra::find($id);
+        $modelo = Usuario::find($id);
 
 
 
-        //        $modelo = new Compra;
+        //        $modelo = new Usuario;
 
 
+        $modelo->nome = $dados['nome'];
+        $modelo->email = $dados['email'];
+        if(isset($dados['senha']) && !empty($dados['senha'])) {
+            $modelo->senha = md5($dados['senha']);
+        }
 
-        $modelo->titulo = $dados['titulo'];
-        $modelo->desc = $dados['desc'];
+
         $objModelo = $modelo->save();
 
 
 
-        return $response->withRedirect('/compras');
+        return $response->withRedirect('/usuarios');
 
 
     }
@@ -106,12 +111,12 @@ class ComprasController extends Controller{
 
 
         $id = $request->getAttribute('id');
-        $modelo = Compra::find($id);
+        $modelo = Usuario::find($id);
         $ok = $modelo->delete();
 
 
 
-        return $response->withRedirect('/compras');
+        return $response->withRedirect('/usuarios');
 
 
     }

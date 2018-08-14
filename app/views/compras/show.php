@@ -4,8 +4,8 @@
 
 <h2>Lista de Detalhes</h2>
 
-    <h3>Título: <?php echo $this->compra->titulo;?></h3>
-    <p>Descrição: <?php echo $this->compra->desc;?></p>
+    <h3>Título: <?php echo $this->modelo->titulo;?></h3>
+    <p>Descrição: <?php echo $this->modelo->desc;?></p>
 
 
 

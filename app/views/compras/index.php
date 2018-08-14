@@ -7,7 +7,7 @@
 <a href="/compras/adicionar">Criar</a>
 
 <ul>
-    <?php foreach ($this->compras as $key => $value): ?>
+    <?php foreach ($this->modelo as $key => $value): ?>
         <li><?php echo $value['titulo']?> - <?php echo $value['desc']?>
 
             <form action="/compras/deletar/<?php echo $value['id']?>" method="post">
