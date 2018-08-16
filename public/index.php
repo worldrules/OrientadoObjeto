@@ -33,28 +33,28 @@ $app = new App([
 
 $app->get('https://phpoo.herokuapp.com/', ComprasController::class . ':index');
 $app->get('https://phpoo.herokuapp.com/compras', ComprasController::class . ':index');
-$app->get('https://phpoo.herokuapp.com/compras/detalhe/{id}', ComprasController::class . ':detalhe');
-$app->get('https://phpoo.herokuapp.com/compras/adicionar', ComprasController::class . ':adicionar');
-$app->post('https://phpoo.herokuapp.com/compras', ComprasController::class . ':salvar');
-$app->get('https://phpoo.herokuapp.com/compras/editar/{id}', ComprasController::class . ':editar');
-$app->put('https://phpoo.herokuapp.com/compras/{id}', ComprasController::class . ':atualizar');
-$app->delete('https://phpoo.herokuapp.com/compras/deletar/{id}', ComprasController::class . ':deletar');
+$app->get('/compras/detalhe/{id}', ComprasController::class . ':detalhe');
+$app->get('/compras/adicionar', ComprasController::class . ':adicionar');
+$app->post('/compras', ComprasController::class . ':salvar');
+$app->get('/compras/editar/{id}', ComprasController::class . ':editar');
+$app->put('/compras/{id}', ComprasController::class . ':atualizar');
+$app->delete('/compras/deletar/{id}', ComprasController::class . ':deletar');
 
 //rotas para usuarios
-$app->get('https://phpoo.herokuapp.com/usuarios', UsuariosController::class . ':index');
-$app->get('https://phpoo.herokuapp.com/usuarios/detalhe/{id}', UsuariosController::class . ':detalhe');
-$app->get('https://phpoo.herokuapp.com/usuarios/adicionar', UsuariosController::class . ':adicionar');
-$app->post('https://phpoo.herokuapp.com/usuarios', UsuariosController::class . ':salvar');
-$app->get('https://phpoo.herokuapp.com/usuarios/editar/{id}', UsuariosController::class . ':editar');
-$app->put('https://phpoo.herokuapp.com/usuarios/{id}', UsuariosController::class . ':atualizar');
-$app->delete('https://phpoo.herokuapp.com/usuarios/deletar/{id}', UsuariosController::class . ':deletar');
+$app->get('/usuarios', UsuariosController::class . ':index');
+$app->get('/usuarios/detalhe/{id}', UsuariosController::class . ':detalhe');
+$app->get('/usuarios/adicionar', UsuariosController::class . ':adicionar');
+$app->post('/usuarios', UsuariosController::class . ':salvar');
+$app->get('/usuarios/editar/{id}', UsuariosController::class . ':editar');
+$app->put('/usuarios/{id}', UsuariosController::class . ':atualizar');
+$app->delete('/usuarios/deletar/{id}', UsuariosController::class . ':deletar');
 
 //rotas para login
 
 
-$app->get('https://phpoo.herokuapp.com/login', AuthController::class. ':index');
-$app->post('https://phpoo.herokuapp.com/login', AuthController::class. ':entrar');
-$app->get('https://phpoo.herokuapp.com/logout', AuthController::class. ':sair');
+$app->get('/login', AuthController::class. ':index');
+$app->post('/login', AuthController::class. ':entrar');
+$app->get('/logout', AuthController::class. ':sair');
 
 $app->run();
 
