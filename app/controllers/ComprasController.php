@@ -20,6 +20,20 @@ class ComprasController extends Controller{
 
 
     //Cria a pagina e exibi na view
+    /**
+     * ComprasController constructor.
+     */
+    public function __construct()
+    {
+
+        session_start();
+        if(!isset($_SESSION['id'])) {
+            header("Location: /login");
+            die();
+
+        }
+    }
+
     public function index(ServerRequestInterface $request, ResponseInterface $response) {
 
         $modelo = Compra::all();

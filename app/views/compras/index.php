@@ -12,10 +12,10 @@
 
             <form action="/compras/deletar/<?php echo $value['id']?>" method="post">
             <input type="hidden" name="_METHOD" value="delete">
-            <a href="/compras/detalhe/<?php echo $value['id']?>"><button type="button" name="button">Detalhe</button></a>
-            <a href="/compras/editar/<?php echo $value['id']?>"><button type="button" name="button">Editar</button></a>
+            <a href="/compras/detalhe/<?php echo $value['id']?>"><button class="btn btn-primary" type="button" name="button">Detalhe</button></a>
+            <a href="/compras/editar/<?php echo $value['id']?>"><button class="btn btn-primary" type="button" name="button">Editar</button></a>
 
-                    <button>Deletar</button>
+                    <button class="btn btn-primary">Deletar</button>
             </form>
         </li>
     <?php endforeach ?>
