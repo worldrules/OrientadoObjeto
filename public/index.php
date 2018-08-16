@@ -18,16 +18,9 @@ use App\Controllers\AuthController;
 //phpinfo();
 
 
-//$app = new App;
+$app = new App;
 
-$app = new App([
 
-   'settings' => [
-       'displayErrorDetails' => true,
-       'debug'               => true,
-
-   ]
-]);
 
 //rotas para compras
 
