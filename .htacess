@@ -1,4 +1,4 @@
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^phpoo.herokuapp.com/$ [NC,OR] RewriteCond %{HTTP_HOST} ^phpoo.herokuapp.com/$
+RewriteCond %{HTTP_HOST} ^phpoo.herokuapp.com/$ [NC,OR] RewriteCond %{HTTP_HOST} ^https://phpoo.herokuapp.com/$
 RewriteCond %{REQUEST_URI} !public/
 RewriteRule (.*) /public/$1 [L]
