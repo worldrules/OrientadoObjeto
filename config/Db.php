@@ -17,6 +17,7 @@ class Db
 
 
         $conexao = new \PDO("mysql:host=us-cdbr-iron-east-01.cleardb.net;dbname=heroku_4a83a6fa9a0d416;charset=utf8", "b6cf332962ee9a","e9ff57e0");
+
         return $conexao;
 
 

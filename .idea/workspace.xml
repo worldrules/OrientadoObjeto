@@ -4,6 +4,7 @@
     <list default="true" id="230a287e-c20e-4aaa-8d61-c03069791745" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/config/Db.php" afterPath="$PROJECT_DIR$/config/Db.php" />
+      <change beforePath="$PROJECT_DIR$/config/SiteInfo.php" afterPath="$PROJECT_DIR$/config/SiteInfo.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,17 +50,27 @@
         <entry file="file://$PROJECT_DIR$/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="598">
-              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <caret line="47" column="74" lean-forward="true" selection-start-line="47" selection-start-column="74" selection-end-line="47" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Db.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Db.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/Db.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="416">
               <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SiteInfo.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/SiteInfo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -141,7 +152,6 @@
         <option value="$PROJECT_DIR$/app/controllers/ComprasController.php" />
         <option value="$PROJECT_DIR$/app/controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/app/views/usuarios/index.php" />
-        <option value="$PROJECT_DIR$/config/SiteInfo.php" />
         <option value="$PROJECT_DIR$/helpers/Util.php" />
         <option value="$PROJECT_DIR$/app/views/layout/rodape.php" />
         <option value="$PROJECT_DIR$/app/views/layout/nav.php" />
@@ -150,6 +160,7 @@
         <option value="$PROJECT_DIR$/app/views/compras/index.php" />
         <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/config/Db.php" />
+        <option value="$PROJECT_DIR$/config/SiteInfo.php" />
       </list>
     </option>
   </component>
@@ -411,7 +422,7 @@
       <workItem from="1534346114385" duration="9189000" />
       <workItem from="1534448002142" duration="835000" />
       <workItem from="1534450527783" duration="123000" />
-      <workItem from="1534450739698" duration="6460000" />
+      <workItem from="1534450739698" duration="6955000" />
     </task>
     <task id="LOCAL-00001" summary="Deploi">
       <created>1524293772197</created>
@@ -497,11 +508,32 @@
       <option name="project" value="LOCAL" />
       <updated>1534457205640</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Deploi">
+      <created>1534457437523</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1534457437523</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Deploi">
+      <created>1534457567922</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1534457567922</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Deploi">
+      <created>1534457624521</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1534457624521</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118670000" />
+    <option name="totallyTimeSpent" value="119165000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -863,14 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/SiteInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layout/nav.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
@@ -1012,7 +1036,7 @@
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <caret line="47" column="74" lean-forward="true" selection-start-line="47" selection-start-column="74" selection-end-line="47" selection-end-column="74" />
           <folding />
         </state>
       </provider>
@@ -1021,6 +1045,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/SiteInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>

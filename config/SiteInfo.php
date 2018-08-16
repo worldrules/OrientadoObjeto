@@ -15,7 +15,7 @@ class SiteInfo {
     //não precisa instanciar a classe STATIC
     public static $nome = "Seu Site";
     public static $descricao = "Site de Vendas";
-    public static $urll = "http://localhost:9000/";
+    public static $urll = "https://phpoo.herokuapp.com/";
 
 
 
