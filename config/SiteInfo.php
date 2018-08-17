@@ -16,6 +16,7 @@ class SiteInfo {
     public static $nome = "Seu Site";
     public static $descricao = "Site de Vendas";
     public static $urll = "https://phpoo.herokuapp.com/";
+    //public static $urll = "https://localhost:9000/";
 
 
 
