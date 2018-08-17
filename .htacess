@@ -1,8 +1,6 @@
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^?phpoo.herokuapp.com$
-RewriteCond %{REQUEST_URI} !^/public/
+RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /public/$1
-RewriteCond %{HTTP_HOST} ^?phpoo.herokuapp.com
-RewriteRule ^(/)?$ public/index.php [L]
+RewriteRule ^ index.php [QSA,L]
+
+AllowOverride All
