@@ -24,7 +24,7 @@ $app = new App;
 
 //rotas para compras
 
-$app->get('/', ComprasController::class . ':index');
+$app->get('', ComprasController::class . ':index');
 $app->get('/compras', ComprasController::class . ':index');
 $app->get('/compras/detalhe/{id}', ComprasController::class . ':detalhe');
 $app->get('/compras/adicionar', ComprasController::class . ':adicionar');
