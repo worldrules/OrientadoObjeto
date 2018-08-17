@@ -1,4 +1,4 @@
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteRule ^(.*)$ public/$1 [L]
-</IfModule>
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^herokuapp.com$ [NC,OR] RewriteCond %{HTTP_HOST} ^phpoo.herokuapp.com$
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule (.*) /public/$1 [L]
